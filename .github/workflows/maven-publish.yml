@@ -27,9 +27,12 @@ jobs:
     - name: Build with Maven
       run: mvn -B package -Dmaven.test.skip=true
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: jars
-        path: target/*.jar
-
+#    - name: Upload build artifacts
+#      uses: actions/upload-artifact@v3
+#      with:
+#        name: jars
+#        path: target/*.jar
+    - name: Publish to GitHub Packages Apache Maven
+      run: mvn deploy -Dmaven.test.skip=true -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}

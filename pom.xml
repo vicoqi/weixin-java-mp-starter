@@ -9,7 +9,7 @@
         <version>2.6.7</version>
     </parent>
 
-    <groupId>com.github.binarywang</groupId>
+    <groupId>com.github.vicoqi</groupId>
     <version>1.0.0-SNAPSHOT</version>
     <artifactId>weixin-java-mp-demo</artifactId>
     <packaging>jar</packaging>
